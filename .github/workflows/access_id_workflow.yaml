@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print a message
-        run : echo "The ACCESS_ID is ${{ vars.ACCESS_ID }}"
+        run : echo "The ACCESS_ID is " ${{ vars.ACCESS_ID }}
       
