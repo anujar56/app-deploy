@@ -1,0 +1,21 @@
+name: python-check
+
+on:
+  push:
+
+jobs:
+  Python-setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Python setup
+        uses: actions/setup-python@v4
+      - name: Dependency installation
+        run: pip install pytest flake8
+      - name: Python version verification
+        run: python --version
+      - name: Flake8 check
+        run: flake8 --version
+      - name: Pytest check
+        run: pytest --version
+      
+      
